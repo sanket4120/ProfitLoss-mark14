@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stonks Practice</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Where's my Stonks?</h1>
+      <div class="form-group">
+        <input
+          type="number"
+          name="initial-price"
+          id="initial-price"
+          class="form-control"
+          placeholder="Enter initial price here"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          name="stock-count"
+          id="stock-count"
+          class="form-control"
+          placeholder="Enter number of stocks here"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          name="current-price"
+          id="current-price"
+          class="form-control"
+          placeholder="Enter current price here"
+        />
+      </div>
+      <div class="form-group submit">
+        <button type="submit" class="btn" id="submit">TELL ME!</button>
+      </div>
+      <p id="msg"></p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

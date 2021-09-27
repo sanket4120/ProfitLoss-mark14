@@ -1,0 +1,57 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.form-group {
+  margin: 1rem auto;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  border: 2px #1b1b1b solid;
+  border-radius: 5px;
+  font-size: inherit;
+}
+
+.submit {
+  text-align: center;
+}
+
+.btn {
+  padding: 5px 15px;
+  border: none;
+  border: 2px #1b1b1b solid;
+  border-radius: 5px;
+  font-size: inherit;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s linear;
+}
+
+.btn:hover {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+#msg {
+  text-align: center;
+}
