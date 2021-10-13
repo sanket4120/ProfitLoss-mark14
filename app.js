@@ -23,25 +23,34 @@ function calcLoss(costPrice, currPrice) {
 function calc() {
   msg.innerText = '';
 
+  let curPrice = Number(initialPrice.value);
+  let initPrice = Number(initialPrice.value);
+  let stkCount = Number(stockCount.value);
+
   if (
     initialPrice.value === '' ||
     stockCount.value === '' ||
     currentPrice.value === ''
   ) {
-    msg.innerText = 'Please fill in all the fields';
-    msg.style.color = 'red';
+    displayMsg('Please fill in all the fields', 'red');
+  } else if (curPrice < 0 || initPrice < 0 || stkCount <= 0) {
+    displayMsg('Invalid input', 'red');
   } else {
     const costPrice = initialPrice.value * stockCount.value;
     const currPrice = currentPrice.value * stockCount.value;
     if (costPrice < currPrice) {
       calcProfit(costPrice, currPrice);
     } else if (costPrice == currPrice) {
-      msg.innerText = `No pain No gain, and no gain no pain :)`;
-      msg.style.color = '#1b1b1b';
+      displayMsg('No pain No gain, and no gain no pain :)', '#1b1b1b');
     } else {
       calcLoss(costPrice, currPrice);
     }
   }
+}
+
+function displayMsg(message, color) {
+  msg.innerText = message;
+  msg.style.color = color;
 }
 
 submit.addEventListener('click', calc);
